@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="test.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<html lang="en">
+<center>
+    <h1>{{ "USER LOG IN" }}</h1>
+    <hr>
+    <form method = "post" action ="/insertUser/">
+        {% csrf_token %}
+        <label for="username">Register:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <input type="text" id="password" name="password"><br>
+        <input type="submit" name = "insertbutton" onclick=" alert('Congrats! You are registered!')" value="Register user">
+    </form>
+
+    <form method = "post" action ="/loginUser/">
+        {% csrf_token %}
+        <label for="username">Login:</label><br>
+        <input type="text" id="username_login" name="username_login"><br>
+        <input type="text" id="password_login" name="password_login"><br>
+        <input type="submit" name = "insertbutton" onclick=" alert('Logging in')" value="Login">
+    </form>
+    <hr>
+    <form method = "post" action ="/userSaves/">
+        {% csrf_token %}
+        <label for="username">Favorite Stock:</label><br>
+        <input type="text" id="company" name="company"><br>
+        <input type="submit" name = "insertbutton" onclick=" alert('Saving Company')" value="Saved">
+    </form>
+    <hr>
+
+    </p>{{ view_saved|safe }}</p>
+
+    </p>{{ log_out|safe }}</p>
+
+    </p>{{ view_stock|safe }}</p>
+
+    </p>{{ view_FP|safe }}</p>
+
+    </p>{{ view_SFI|safe }}</p>
+
+    </p>{{ home_page|safe }}</p>
+
+    <img src = 'https://image.shutterstock.com/image-photo/men-wear-face-mask-on-260nw-1673933890.jpg'>
+</center>
+</html>

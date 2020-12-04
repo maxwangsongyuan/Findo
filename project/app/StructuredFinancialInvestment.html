@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="test.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<html lang="en">
+<center>
+    <h1>{{ "Structured Financial Investment Page" }}</h1>
+
+    <hr>
+    <form method = "post" action ="/insertSFI/">
+        {% csrf_token %}
+        <label for="insert_fp_id">Insert financial product id:</label><br>
+        <input type="text" id="insert_fp_id" name="insert_fp_id"><br>
+
+        <label for="insert_stock_id">Insert stock id:</label><br>
+        <input type="text" id="insert_stock_id" name="insert_stock_id"><br>
+
+        <label for="insert_SFI_id">Insert structured financial investment id:</label><br>
+        <input type="text" id="insert_SFI_id" name="insert_SFI_id"><br>
+
+        <label for="insert_Knock_in">Insert knock in price:</label><br>
+        <input type="text" id="insert_Knock_in" name="insert_Knock_in"><br>
+
+        <label for="insert_Knock_out">Insert knock out price:</label><br>
+        <input type="text" id="insert_Knock_out" name="insert_Knock_out"><br>
+
+        <label for="insert_put_strike">Insert put strike price:</label><br>
+        <input type="text" id="insert_put_strike" name="insert_put_strike"><br>
+
+        <input type="submit" name = "insertSFIbutton" onclick=" alert('Congrats! inserted!')" value="insert SFI">
+    </form>
+
+    <form method = "post" action ="/deleteSFI/">
+        {% csrf_token %}
+        <label for="deleteSFI">Delete structured financial investment id:</label><br>
+        <input type="text" id="deleteSFI" name="deleteSFI"><br>
+        <input type="submit" name = "deleteSFIbutton" onclick=" alert('Congrats! deleted!')" value="delete SFI">
+    </form>
+
+    <form method = "post" action ="/updateSFI/">
+        {% csrf_token %}
+        <label for="update_SFI_from">Update SFI from:</label><br>
+        <input type="text" id="update_SFI_from" name="update_SFI_from"><br>
+        <label for="update_SFI_to">Update SFI to:</label><br>
+        <input type="text" id="update_SFI_to" name="update_SFI_to"><br>
+        <input type="submit" name = "updateSFIbutton" onclick=" alert('Congrats! updated!')" value="update SFI">
+    </form>
+
+    <form method = "post" action ="/searchSFI/">
+        {% csrf_token %}
+        <label for="search_SFI">Search knock in price via SFI id:</label><br>
+        <input type="text" id="search_SFI" name="search_SFI"><br>
+        <input type="submit" name = "searchSFIbutton"  value="search SFI">
+    </form>
+
+
+
+
+    </p>{{ view_SFI|safe }}</p>
+
+    </p>{{ view_FP|safe }}</p>
+
+    </p>{{ view_User|safe }}</p>
+
+    </p>{{ home_page|safe }}</p>
+
+
+    <img src = 'https://specials-images.forbesimg.com/imageserve/1203497834/960x0.jpg?fit=scale'>
+</center>
+</html>

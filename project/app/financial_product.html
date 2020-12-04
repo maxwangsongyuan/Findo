@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="test.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<html lang="en">
+<center>
+    </p>{{ "Financial Products Page" }}</p>
+<!--    <form method = "post" action ="/insertFP/">-->
+<!--        {% csrf_token %}-->
+<!--        <label for="insert_fp_id">Insert financial product id:</label><br>-->
+<!--        <input type="text" id="insert_fp_id" name="insert_fp_id"><br>-->
+<!--        -->
+
+
+<!--        <input type="submit" name = "insertFPbutton" onclick=" alert('Congrats! inserted!')" value="insert FP">-->
+<!--    </form>-->
+
+    <form method = "post" action ="/searchFP/">
+        {% csrf_token %}
+        <label for="search_fp">Search via product name:</label><br>
+        <input type="text" id="search_fp" name="search_fp"><br>
+        <input type="submit" name = "searchfpbutton"  value="search FP id">
+    </form>
+
+
+    </p>{{ view_FP|safe }}</p>
+
+    </p>{{ view_SFI|safe }}</p>
+
+    </p>{{ home_page|safe }}</p>
+
+    <img src = 'https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/surgical-mask-on-100-chinese-yuan-banknote-benny-marty.jpg'>
+</center>
+</html>

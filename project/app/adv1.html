@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="test.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<html lang="en">
+<center>
+    <h1>{{ "Price Prediction" }}</h1>
+    <hr>
+    <b>{{ "Search for a predicted price in a given year" }}</b>
+    <br>
+        <form method = "post" action ="/ad1/">
+            {% csrf_token %}
+            <label for="seach_year">Search Year:</label><br>
+            <input type="int" id="seach_year" name="seach_year"><br>
+            <label for="seach_company_name">Search Company Name:</label><br>
+            <input type="text" id="seach_company_name" name="seach_company_name"><br>
+            <input type="submit" name = "search_button"  value="Predict">
+        </form>
+    <br>
+
+
+    </p>{{ view_stock|safe }}</p>
+
+    </p>{{ view_FP|safe }}</p>
+
+    </p>{{ view_SFI|safe }}</p>
+
+    </p>{{ view_User|safe }}</p>
+
+    </p>{{ home_page|safe }}</p>
+
+
+    <img src = 'https://thumbs.dreamstime.com/b/british-pound-queen-elizabeth-medical-mask-coronovirus-covid-pandemic-concept-world-financial-crisis-economy-176045755.jpg'>
+    </center>
+
+</html>

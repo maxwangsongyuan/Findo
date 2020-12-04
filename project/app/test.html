@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="test.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<html lang="en">
+<center>
+    </p>{{ "wanna try something on your data base? go ahead" }}</p>
+    <form method = "post" action ="/insert/">
+        {% csrf_token %}
+        <label for="insert">Insert:</label><br>
+        <input type="text" id="insert" name="insert"><br>
+        <input type="submit" name = "insertbutton" onclick=" alert('Congrats! inserted!')" value="insert">
+    </form>
+
+<!--    <form method = "post">-->
+<!--        {% csrf_token %}-->
+<!--        name: <input type="text" name="name"><br>-->
+<!--        <input type="submit" name = "insertbutton" onclick=" alert('Congrats! inserted!')" value="insert">-->
+<!--    </form>-->
+
+    <form method = "post" action ="/delete/">
+        {% csrf_token %}
+        <label for="delete">Delete:</label><br>
+        <input type="text" id="delete" name="delete"><br>
+        <input type="submit" name = "deletebutton" onclick=" alert('Congrats! deleted!')" value="delete">
+    </form>
+
+
+    <form method = "post" action ="/update/">
+        {% csrf_token %}
+        <label for="update_from">Update from:</label><br>
+        <input type="text" id="update_from" name="update_from"><br>
+        <label for="update_to">Update to:</label><br>
+        <input type="text" id="update_to" name="update_to"><br><br>
+        <input type="submit" name = "updatebutton" onclick=" alert('Congrats! updated!')" value="update">
+    </form>
+
+
+    </p>{{ views_view|safe }}</p>
+    </p>{{ views_insert|safe }}</p>
+    </p>{{ views_update|safe }}</p>
+    </p>{{ views_delete|safe }}</p>
+
+    <img src = 'https://specials-images.forbesimg.com/imageserve/1203497834/960x0.jpg?fit=scale'>
+</center>
+</html>
+
